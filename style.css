@@ -113,42 +113,49 @@ footer {
   display: flex;
   justify-content: center;
 }
+.attribution {
+  font-size: 15px;
+  font-style: italic;
+}
 
 /* para mobile aplico las propiedades con pantalla de 375px , pero aplico apartir de 480px en caso de tablets  */
 @media screen and (max-width: 480px) {
   .container {
-    width: 100%;
-  }
-
-  .left-img {
+    width: 480px;
+    justify-content: center;
     display: inline-block;
-    padding: 20px 0 20px 40px;
-    width: 300px;
-    text-align: left;
+    margin: auto;
   }
 
   .left {
     padding: 0;
+    /* flex-direction: column; */
     background-image: url(./images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
   }
 
+  .left-img {
+    display: inline-block;
+    padding: 0px 0 30px 50px;
+    width: 200px;
+    text-align: left;
+  }
+
   .left-img-hero {
-    display: block;
-    margin-top: 10px;
+    display: flex;
     width: 100%;
   }
 
   .left-title {
     margin-top: 40px;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     padding: 5px;
   }
 
   .left-form-button {
-    width: 350px;
-    margin-left: 25px;
+    width: 100px;
+    margin-left: 30px;
   }
 
   .left-text {
@@ -161,6 +168,11 @@ footer {
   }
 
   footer {
-    margin-top: 70px;
+    margin-top: 10px;
+  }
+
+  .attribution {
+    font-size: 10px;
+    font-style: italic;
   }
 }
