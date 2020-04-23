@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* realizo en el cuerpo de la pagina un estilo de base */
+}
+/* las siguientes propiedades son para desktop osea  pantalla de 1440px */
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  width: 1440px;
+  /* ancho de pantalla para escritorio */
+  display: flex;
+  /* flex para hacer flexible el contenedor y adaptar cada elemento por separado, divide la pantalla en este caso en 2*/
+  margin: auto;
+  /* magin en auto para centrar */
+  border: 2px solid black;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.left {
+  padding: 0 175px;
+  /* hace un espaciado desde el contenedor libre del contenido de la izquierda con respecto al eje  "X" */
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  /* esta propiedad permite que la imagen no se repita */
+}
+
+.left-img {
+  margin-top: 50px;
+  /* margen superior que deja respecto al techo */
+}
+
+.left-img-hero {
+  display: none;
+}
+
+.left-title {
+  margin-top: 150px;
+  font-size: 64px;
+  text-transform: uppercase;
+  /* uppercase = convierte las letras en mayuscula */
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+  /* tamaño de letra */
+  letter-spacing: 18px;
+  /* espaciado ente letras */
+}
+
+.left-title-sub {
+  color: black;
+  font-weight: 600;
+  /* peso de la fuente */
+}
+
+.left-text {
+  /* margin-bottom: 50px; */
+  margin-top: 25px;
+  color: hsl(0, 36%, 70%);
+  font-size: 16px;
+  line-height: 28px;
+  /* establece una altura entre las lineas */
+}
+
+.left-form {
+  position: relative;
+  /* posicion del elemento con respecto al documento */
+  margin-top: 25px;
+}
+
+.left-form-input {
+  width: 450px;
+  height: 50px;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 30px;
+  padding-left: 24px;
+  /* es el espacio libre con respecto a la izquierda libre del texto del boton*/
+}
+
+.left-form-input::placeholder {
+  /* le agrego al input una spseudo clase que es placeholder con "::" */
+  color: hsl(0, 36%, 70%);
+  font-weight: 600;
+}
+
+.left-form-button {
+  position: absolute;
+  /* posicion del boton dentro del formulario */
+  right: 25px;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  /* tipo de cursor al pasar el mouse */
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0 5px 20px 1px hsl(0, 80%, 86%);
+  /* sombra del box o caja */
+}
+
+.left-form-button:hover {
+  box-shadow: 0 5px 20px 2px hsl(0, 93%, 68%);
+  height: 55px;
+  width: 105px;
+}
+
+.right-img {
+  height: 100%;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* para mobile aplico las propiedades con pantalla de 375px , pero aplico apartir de 480px en caso de tablets  */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .left-img {
+    display: inline-block;
+    padding: 20px 0 20px 40px;
+    width: 300px;
+    text-align: left;
+  }
+
+  .left {
+    padding: 0;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+  }
+
+  .left-img-hero {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .left-title {
+    margin-top: 40px;
+    font-size: 50px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .left-form-button {
+    width: 350px;
+    margin-left: 25px;
+  }
+
+  .left-text {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .right-img {
+    display: none;
+  }
+
+  footer {
+    margin-top: 70px;
+  }
+}
